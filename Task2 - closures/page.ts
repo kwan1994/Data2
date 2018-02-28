@@ -18,8 +18,9 @@ export const create = b.createComponent<IData>({
     
     init(ctx:IContext,me:b.IBobrilNode){
         ctx.subsetsThatAreFixedPoints = [];
-        
-        subsetsOfSet(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']).forEach(value => {if (isFixedPoint([...theory], new Set(value))) ctx.subsetsThatAreFixedPoints.push(value); });
+        ctx.set = set;
+        ctx.theory = theory;
+        subsetsOfSet(ctx.set).forEach(value => {if (isFixedPoint([...ctx.theory], new Set(value))) ctx.subsetsThatAreFixedPoints.push(value); });
         
     },
 
