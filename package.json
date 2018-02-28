@@ -1,0 +1,16 @@
+{
+  "name": "data2",
+  "version": "1.0.0",
+  "description": "Page with tasks for Data2",
+  "main": "app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bobril-m": "^0.12.5",
+    "bobrilstrap": "^3.0.0",
+    "prettier": "^1.10.2"
+  }
+}
