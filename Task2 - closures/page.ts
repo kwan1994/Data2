@@ -27,17 +27,9 @@ export const create = b.createComponent<IData>({
     render(ctx: IContext, me: b.IBobrilNode) {
         
        let childern = [
-           {
-               tag:'p',
-               childern:'Teorie:'
-               
-           },
-           {
-            tag:'p',
-            childern:'Set:'
-            
-        },
-           b.styledDiv(setToString(new Set(ctx.set)))
+           b.styledDiv("set from witch we create fixed points"),
+           b.styledDiv(setToString(new Set(ctx.set))),
+           b.styledDiv("fixed points of given set"),
         ];
 
        ctx.subsetsThatAreFixedPoints.forEach(value => childern.push(b.styledDiv(setToString(value))))
