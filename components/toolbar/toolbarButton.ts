@@ -24,4 +24,5 @@ export const create = b.createComponent<IData>({
 
 let style = b.styleDef({
     color: 'white',
+    display: 'inline'
 })

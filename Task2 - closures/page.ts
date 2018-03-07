@@ -8,8 +8,8 @@ export interface IData {
 
 export interface IContext extends b.IBobrilCtx {
     data: IData;
-    subsetsThatAreFixedPoints: Set<any>[]
-    set: any[];
+    subsetsThatAreFixedPoints: Set<string>[]
+    set: string[];
     theory: Theory<string>;
 }
 
@@ -20,7 +20,7 @@ export const create = b.createComponent<IData>({
         ctx.subsetsThatAreFixedPoints = [];
         ctx.set = set;
         ctx.theory = theory;
-        subsetsOfSet(ctx.set).forEach(value => {if (isFixedPoint([...ctx.theory], new Set(value))) ctx.subsetsThatAreFixedPoints.push(value); });
+        subsetsOfSet(ctx.set).forEach(value => {if (isFixedPoint([...ctx.theory], new Set(value))) ctx.subsetsThatAreFixedPoints.push(new Set(value)); });
         
     },
 

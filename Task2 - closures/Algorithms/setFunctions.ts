@@ -13,7 +13,7 @@ export function union<T>(setA:Set<T>,setB:Set<T>){
     return setC;
 }
 
-export function subsetsOfSet(array) {
+export function subsetsOfSet<T>(array:T[]):T[][] {
     return array.reduce(
         (subsets, value) => subsets.concat(
          subsets.map(set => [value,...set])

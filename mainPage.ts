@@ -17,7 +17,13 @@ export const create = b.createComponent<IData>({
                 onClick: () => {
                     b.runTransition(b.createRedirectPush('fixedPoints'))
                 },
-                title:"Fixed Points"})]})
+                title:"Fixed Points"})]}),
+                toolBar.create({childern: [
+                    toolBarButton.create({
+                        onClick: () => {
+                            b.runTransition(b.createRedirectPush('functionalDependencies'))
+                        },
+                        title:"Functional Dependencies"})]})
             ,me.data.activeRouteHandler()];
     }
 });
